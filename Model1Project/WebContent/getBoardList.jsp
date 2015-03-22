@@ -1,19 +1,4 @@
-<%@page import="java.util.List"%>
-<%@page import="com.multicampus.biz.board.impl.BoardDAO"%>
-<%@page import="com.multicampus.biz.board.BoardVO"%>
 <%@page contentType="text/html; charset=EUC-KR"%>
-
-<%
-	// 1. 사용자 입력정보 추출(검색 기능은 나중에...)
-	
-	// 2. DB 연동
-	BoardVO vo = new BoardVO();
-	BoardDAO boardDAO = new BoardDAO();
-	List<BoardVO> boardList = boardDAO.getBoardList(vo);
-	
-	// 3. 응답 화면 설정
-%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -52,15 +37,13 @@
 	<th bgcolor="orange" width="100">조회수</th>
 </tr>
 
-<% for(BoardVO board : boardList) { %>
 <tr>
-	<td><%= board.getSeq() %></td>
-	<td align="left"><a href="getBoard.jsp?seq=<%= board.getSeq() %>"><%= board.getTitle() %></a></td>
-	<td><%= board.getWriter() %></td>
-	<td><%= board.getRegDate() %></td>
-	<td><%= board.getCnt() %></td>
+	<td>test</td>
+	<td align="left"><a href="getBoard.jsp">test</a></td>
+	<td>test</td>
+	<td>test</td>
+	<td>test</td>
 </tr>
-<% } %>
 
 </table>
 <br>
